@@ -45,16 +45,17 @@ searchRoutes.post("/api", async (req, res) => {
 
         return name.includes(searchTerm) || email.includes(searchTerm);
     });
+    console.log(searchResults);
 
     setTimeout(() => {
-        const searchResultHtml = searchResults.map((contact) => `
+        const searchResultsHtml = searchResults.map((contact) => `
             <tr>
                 <td><div class="my-4 p-2">${contact.name}</div></td>
                 <td><div class="my-4 p-2">${contact.email}</div></td>
             </tr>
         `).join("");
 
-        res.send(searchResultHtml);
+        res.send(searchResultsHtml);
     }, 1000);
 });
 
