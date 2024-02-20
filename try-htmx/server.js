@@ -5,6 +5,7 @@ import searchRoutes from "./router/search_routes.js";
 import pollingRoutes from "./router/polling_routes.js";
 import validationRoutes from "./router/validation_routes.js";
 import gamesRoutes from "./router/games_routes.js";
+import secretRoutes from "./router/secret_routes.js";
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.use("/search", searchRoutes);
 app.use("/polling", pollingRoutes);
 app.use("/validation", validationRoutes);
 app.use("/games", gamesRoutes);
+app.use("/secret", secretRoutes);
 
 app.get("/select", (req, res) => {
     res.send(`<p>Response to the element request which has hx-select attribute defined.</p>`);
