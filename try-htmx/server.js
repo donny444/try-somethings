@@ -24,7 +24,10 @@ app.use("/games", gamesRoutes);
 app.use("/secret", secretRoutes);
 
 app.get("/select", (req, res) => {
-    res.send(`<p>Response to the element request which has hx-select attribute defined.</p>`);
+    res.send(`
+        <p id="not-selected">Not Selected This</p>
+        <p id="selected">Selected Element</p>`
+    );
 });
 
 app.listen(5000, () => console.log("Server is running on port 5000"));
