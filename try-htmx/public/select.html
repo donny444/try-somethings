@@ -12,11 +12,48 @@
 <body>
     <button
         hx-get="/select"
-        hx-select="#selected"
-        hx-swap="afterend"
+        hx-select="#random1"
+        hx-swap="outerHTML"
         class="bg-green-500 text-white py-2 px-3 my-5 rounded-lg"
     >
-        Select Request
+        Random Word1
     </button>
+    <button
+        hx-get="/select"
+        hx-select="#random2"
+        hx-swap="outerHTML"
+        class="bg-blue-500 text-white py-2 px-3 my-5 rounded-lg"
+    >
+        Random Word 2
+    </button>
+    <button
+        hx-get="/select"
+        hx-select="#random3"
+        hx-swap="outerHTML"
+        class="bg-red-500 text-white py-2 px-3 my-5 rounded-lg"
+    >
+        Random Word 3
+    </button>
+    <button
+        hx-get="/select"
+        hx-select="#random4"
+        hx-swap="outerHTML"
+        class="bg-yellow-500 text-white py-2 px-3 my-5 rounded-lg"
+    >
+        Random Word 4
+    </button>
+    <!-- <select
+        hx-get="/select"
+        hx-trigger="changed"
+        hx-select=`#e.target.value`
+        hx-swap="afterend"
+        hx-vals='js:{"color": e.target.value}'
+        name="color"
+    >
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+    </select> -->
 </body>
 </html>
